@@ -1,0 +1,14 @@
+nav{
+    display: flex;
+    width: 100%;
+    padding: 100px;
+    backdrop-filter: #fff;
+}
+
+ul, li, a {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    flex-direction: column;
+    margin: 70px;
+}
