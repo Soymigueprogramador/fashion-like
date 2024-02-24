@@ -1,14 +1,7 @@
-nav{
-    display: flex;
-    width: 100%;
-    padding: 100px;
-    backdrop-filter: #fff;
+Navbar {
+    background-color: rgb(155, 48, 66);
 }
 
-ul, li, a {
-    text-decoration: none;
-    list-style-type: none;
-    display: inline-block;
-    flex-direction: column;
-    margin: 70px;
+a {
+    text-align: center;
 }
