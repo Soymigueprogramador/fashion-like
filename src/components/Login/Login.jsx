@@ -1,24 +1,43 @@
-import './Login.css'
+// Importaciones
+import { useState } from 'react';
+import './Login.css';
 
+// Lógica del login
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [contraseña, setContraseña] = useState('');
+
+  const manejarCorreoElectronico = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const manejarContraseña = (event) => {
+    setContraseña(event.target.value);
+  };
+
+  const manejarInicioDeSesion = (event) => {
+    event.preventDefault();
+    console.log('email', email);
+    console.log('contraseña', contraseña);
+  };
+
   return (
     <div>
+      <form onSubmit={manejarInicioDeSesion}>
         <div>
-                <lebel> Email </lebel>
-                <imput type="text" name="Email" placeholder="Ingresa tu Email"> Email </imput>
-            </div>
-            <div>
-                <lebel> Contraseña </lebel>
-                <imput type="number" name="Contraseña" placeholder="Ingresa tu Contraseña"> Contraseña </imput>
-            </div>
-            <div>
-                <button type='submit'> Iniciar sesion </button>
-            </div>
-            <div>
-                <p> ¿No tenes cuenta? </p> <a href='/registro'> Registrate </a>
-            </div>
-    </div>
-  )
-}
+          <label htmlFor='email'>Email</label>
+          <input type='text' id='email' value={email} onChange={manejarCorreoElectronico} required />
+        </div>
+        <div>
+          <label htmlFor='contraseña'>Contraseña</label>
+          <input type='password' id='contraseña' value={contraseña} onChange={manejarContraseña} required />
+        </div>
+        <button type='submit'>Iniciar sesión</button>
+        <p> ¿No tienes cuenta? <a href='/Registro.jsx'> Regístrate </a></p>
 
-export default Login
+      </form>
+    </div>
+  );
+};
+
+export default Login;

@@ -1,30 +1,41 @@
-import './Registro.css'
+// Importaciones
+import './Registro.css';
+import { useState } from 'react';
 
+// Lógica del formulario de registro
 const Registro = () => {
-  return (
-    <div>
-        <form>
-            <div>
-                <lebel> Nombre </lebel>
-                <imput type="text" name="" placeholder="Ingresa tu nombre"> Nombre </imput>
-            </div>
-            <div>
-                <lebel> Email </lebel>
-                <imput type="text" name="Email" placeholder="Ingresa tu Email"> Email </imput>
-            </div>
-            <div>
-                <lebel> Contraseña </lebel>
-                <imput type="number" name="Contraseña" placeholder="Ingresa tu Contraseña"> Contraseña </imput>
-            </div>
-            <div>
-                <button type='submit'> Crear cuenta </button>
-            </div>
-            <div>
-                <p> ¿Ya tenes cuenta? </p> <a href='/login'> Iniciar sesión </a>
-            </div>
-        </form>
-    </div>
-  )
-}
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const [contraseña, setContraseña] = useState('');
 
-export default Registro
+  const manejoDeEnvios = (evento) => {
+    evento.preventDefault();
+    console.log(nombre);
+    console.log(email);
+    console.log(contraseña);
+  };
+
+  return (
+    // Estructura del formulario de registro
+    <div>
+      <form onSubmit={manejoDeEnvios}>
+        <div>
+          <label htmlFor='nombre'>Nombre</label>
+          <input type='text' id='nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} required />
+        </div>
+        <div>
+          <label htmlFor='email'>Email</label>
+          <input type='text' id='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+        </div>
+        <div>
+          <label htmlFor='contraseña'>Contraseña</label>
+          <input type='password' id='contraseña' value={contraseña} onChange={(e) => setContraseña(e.target.value)} required />
+        </div>
+        <button type='submit'>Registrarme</button>
+        <p> ¿Ya tenes cuenta? <a href='../Login/Login.jsx'> Inicia sesion </a> </p>
+      </form>
+    </div>
+  );
+};
+
+export default Registro;

@@ -1,15 +1,14 @@
-import NavBar from './components/NavBar/NavBar.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Registro from './components/Registro/Registro.jsx';
 import Login from './components/Login/Login.jsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar />
       <Routes>
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Registro/>} />
+        <Route path="/Registro/:id/Registro" element={<Registro />} />
+        <Route path="/Login/:idLogin" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
