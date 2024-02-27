@@ -33,7 +33,7 @@ const Login = () => {
           <input type='password' id='contraseña' value={contraseña} onChange={manejarContraseña} required />
         </div>
         <button type='submit'>Iniciar sesión</button>
-        <p> ¿No tienes cuenta? <a href='/Registro.jsx'> Regístrate </a></p>
+        <p> ¿No tienes cuenta? <a href='../Registro/Registro.jsx'> Regístrate </a></p>
 
       </form>
     </div>
