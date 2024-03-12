@@ -22,19 +22,24 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={manejarInicioDeSesion}>
-        <div>
-          <label htmlFor='email'>Email</label>
+    <div className='login-container'>
+      <div className='banner-login'>
+        <img src="../src/assets/image/logo.png" alt="logo" />
+      </div>
+      <form className='form-login' onSubmit={manejarInicioDeSesion}>
+        <h2>Inicia sesion con tu cuenta</h2>
+        <div className='email'>
+          <label htmlFor='email'>Email:</label>
           <input type='text' id='email' value={email} onChange={manejarCorreoElectronico} required />
         </div>
-        <div>
-          <label htmlFor='contraseña'>Contraseña</label>
+        <div className='password'>
+          <label htmlFor='contraseña'>Contraseña:</label>
           <input type='password' id='contraseña' value={contraseña} onChange={manejarContraseña} required />
         </div>
-        <button type='submit'>Iniciar sesión</button>
-        <p> ¿No tienes cuenta? <a href='/Registro.jsx'> Regístrate </a></p>
-
+        <div className='bottom-login'>
+          <button type='submit'>Iniciar sesión</button>
+          <p> ¿No tienes cuenta? <a href='../Registro/Registro.jsx'> Regístrate </a></p>
+        </div>
       </form>
     </div>
   );

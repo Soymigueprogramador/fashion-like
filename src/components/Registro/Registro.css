@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+:root{
+    --fSize430: 1.8rem;
+    --color-boder-input: #FDCF2E;
+    --font-color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Bodoni Moda", serif;
+}
+
+.register-container{
+    box-sizing: border-box;
+    background: linear-gradient(184deg, rgba(239,99,165,1) 52%, rgba(253,207,46,1) 80%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-register{
+    background-image: url('../src/assets/image/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.banner-register img{
+    position: relative;
+    top: 8rem;
+}
+
+.form-register {
+    margin-top: 9rem;
+    margin-left: 70rem;
+    margin-right: 70rem;
+}
+
+.form-register h2{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 200;
+    color: #fff;
+    text-align: left;
+}
+
+.name-register, .email-register, .password-register{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottom-register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 3rem;
+}
+
+.bottom-register button{
+    height: 6rem;
+    width: 18rem;
+    border-radius: 3rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.5);
+    cursor: pointer;
+    border-left: solid 1px black;
+    border-top: solid 1px black;
+    font-size: 2rem;
+    font-family: "Bodoni Moda", serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.bottom-register p{
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 100;
+}
+
+.bottom-register a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.bottom-register a:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+button:active{
+    transition: 0.2s;
+    box-shadow: none;
+    border: solid 3px black;
+    color: grey;
+    
+}
+
+/* ======================Notebooks 1280 x 950 - 1440 x 900 ============================= */
+
+/* @media only screen and (min-width: 1280px) and (max-width: 1440px) {
+
+
+} */
+
+@media (max-width:830px) {
+
+    .banner-register{
+        background-image: none;
+        height: 20vh;
+    }
+
+    .banner-register img{
+        max-width: 80%;
+        margin-bottom: -10rem;
+    }
+
+    .register-container{
+    background-image: url('../src/assets/image/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    overflow-y: hidden;
+    z-index: 2;
+}
+
+.register-container::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index:  -1;
+    height: 100vh;
+}
+
+.form-register{
+    display: flex;
+    flex-direction: column;
+    margin-top: 26rem;
+    
+}
+
+.bottom-register button{
+    height: 7rem;
+    width: 30rem;
+    font-size: 3rem;
+    font-family: "Bodoni Moda", serif;
+    text-shadow: 0.5rem 0.5rem 2rem black;
+}
+
+.bottom-register p{
+    font-size: 2.5rem;
+}
+
+
+}

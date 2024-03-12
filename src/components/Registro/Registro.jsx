@@ -1,5 +1,6 @@
 // Importaciones
 import './Registro.css';
+/* import '../Login/Login.css'; */
 import { useState } from 'react';
 
 // Lógica del formulario de registro
@@ -17,22 +18,28 @@ const Registro = () => {
 
   return (
     // Estructura del formulario de registro
-    <div>
-      <form onSubmit={manejoDeEnvios}>
-        <div>
-          <label htmlFor='nombre'>Nombre</label>
+    <div className='register-container'>
+      <div className='banner-register'>
+        <img src="../src/assets/image/logo.png" alt="logo" />
+      </div>
+      <form className='form-register' onSubmit={manejoDeEnvios}>
+      <h2>Ingresa los siguientes para crear tu cuenta</h2>
+        <div className='name-register'>
+          <label className='test' htmlFor='nombre'>Nombre:</label>
           <input type='text' id='nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} required />
         </div>
-        <div>
-          <label htmlFor='email'>Email</label>
+        <div className='email-register'>
+          <label htmlFor='email'>Email:</label>
           <input type='text' id='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
         </div>
-        <div>
-          <label htmlFor='contraseña'>Contraseña</label>
+        <div className='password-register'>
+          <label htmlFor='contraseña'>Contraseña:</label>
           <input type='password' id='contraseña' value={contraseña} onChange={(e) => setContraseña(e.target.value)} required />
         </div>
-        <button type='submit'>Registrarme</button>
-        <p> ¿Ya tenes cuenta? <a href='../Login/Login.jsx'> Inicia sesion </a> </p>
+        <div className='bottom-register'>
+          <button type='submit'>Registrarme</button>
+          <p> ¿Ya tenes cuenta? <a href='../Login/Login.jsx'> Inicia sesion </a> </p>
+        </div>
       </form>
     </div>
   );
