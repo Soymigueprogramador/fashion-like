@@ -64,6 +64,11 @@ html {
     margin-bottom: 1rem;
 }
 
+::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
 .bottom-register{
     display: flex;
     flex-direction: column;
@@ -175,6 +180,4 @@ button:active{
 .bottom-register p{
     font-size: 2.5rem;
 }
-
-
 }

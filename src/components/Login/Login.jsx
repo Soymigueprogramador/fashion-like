@@ -30,11 +30,11 @@ const Login = () => {
         <h2>Inicia sesion con tu cuenta</h2>
         <div className='email'>
           <label htmlFor='email'>Email:</label>
-          <input type='text' id='email' value={email} onChange={manejarCorreoElectronico} required />
+          <input type='text' id='email' value={email} onChange={manejarCorreoElectronico} required placeholder='Ingresa tu email' />
         </div>
         <div className='password'>
           <label htmlFor='contraseña'>Contraseña:</label>
-          <input type='password' id='contraseña' value={contraseña} onChange={manejarContraseña} required />
+          <input type='password' id='contraseña' value={contraseña} onChange={manejarContraseña} required placeholder='Ingresa tu contraseña' />
         </div>
         <div className='bottom-login'>
           <button type='submit'>Iniciar sesión</button>

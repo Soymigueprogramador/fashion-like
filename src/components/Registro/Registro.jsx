@@ -26,15 +26,15 @@ const Registro = () => {
       <h2>Ingresa los siguientes para crear tu cuenta</h2>
         <div className='name-register'>
           <label className='test' htmlFor='nombre'>Nombre:</label>
-          <input type='text' id='nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} required />
+          <input type='text' id='nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} required placeholder='Ingresa tu nombre' />
         </div>
         <div className='email-register'>
           <label htmlFor='email'>Email:</label>
-          <input type='text' id='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type='text' id='email' value={email} onChange={(e) => setEmail(e.target.value)} required placeholder='Ingresa tu email' />
         </div>
         <div className='password-register'>
           <label htmlFor='contraseña'>Contraseña:</label>
-          <input type='password' id='contraseña' value={contraseña} onChange={(e) => setContraseña(e.target.value)} required />
+          <input type='password' id='contraseña' value={contraseña} onChange={(e) => setContraseña(e.target.value)} required placeholder='Ingresa tu contraseña' />
         </div>
         <div className='bottom-register'>
           <button type='submit'>Registrarme</button>

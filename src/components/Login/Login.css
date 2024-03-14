@@ -93,6 +93,11 @@ input:focus{
     
 }
 
+::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
 .bottom-login{
     display: flex;
     flex-direction: column;
