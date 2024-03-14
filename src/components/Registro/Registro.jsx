@@ -1,7 +1,7 @@
 // Importaciones
 import './Registro.css';
-/* import '../Login/Login.css'; */
 import { useState } from 'react';
+/* import '../Login/Login.css'; */
 
 // Lógica del formulario de registro
 const Registro = () => {
@@ -18,8 +18,8 @@ const Registro = () => {
 
   return (
     // Estructura del formulario de registro
-    <div className='register-container'>
-      <div className='banner-register'>
+    <div className='login-container'>
+      <div className='banner-login'>
         <img src="../../assets/image/logo.png" alt="logo" />
     </div>
       <form className='form-register' onSubmit={manejoDeEnvios}>
