@@ -20,8 +20,8 @@ const Registro = () => {
     // Estructura del formulario de registro
     <div className='register-container'>
       <div className='banner-register'>
-        <img src="../src/assets/image/logo.png" alt="logo" />
-      </div>
+        <img src="../../assets/image/logo.png" alt="logo" />
+    </div>
       <form className='form-register' onSubmit={manejoDeEnvios}>
       <h2>Ingresa los siguientes para crear tu cuenta</h2>
         <div className='name-register'>

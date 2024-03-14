@@ -24,8 +24,8 @@ const Login = () => {
   return (
     <div className='login-container'>
       <div className='banner-login'>
-        <img src="../src/assets/image/logo.png" alt="logo" />
-      </div>
+        <img src="../../assets/image/logo.png" alt="logo" />
+    </div>
       <form className='form-login' onSubmit={manejarInicioDeSesion}>
         <h2>Inicia sesion con tu cuenta</h2>
         <div className='email'>
